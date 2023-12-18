@@ -1,0 +1,23 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "Compile Java",
+        "type": "shell",
+        "command": "bash",
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        },
+        "args": [
+          "-c",
+          "find src -name '*.java' -print | xargs javac -d out"
+        ],
+        "presentation": {
+          "reveal": "silent"
+        },
+        "problemMatcher": "$tsc"
+      }
+    ]
+  }
+  
