@@ -56,7 +56,7 @@ public class UI {
 
     private static void imprimirPeca(XadrezPeca peca, boolean destacar) {
         if (destacar) {
-            System.out.print(ANSI_BLUE_BACKGROUND);
+            System.out.print(ANSI_GREEN_BACKGROUND);
         }
         if (peca == null) {
             System.out.print("-" + ANSI_RESET);

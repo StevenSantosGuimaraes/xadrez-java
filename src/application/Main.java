@@ -30,6 +30,15 @@ public class Main {
                 if (pecaCapturada != null) {
                     listaCapturadas.add(pecaCapturada);
                 }
+                if (xadrezPartida.getPromocao() != null) {
+                    System.out.print("Informe a peça desejada para a promoção do peão (T/C/B/D): ");
+                    String tipo = sc.nextLine().toUpperCase();
+                    while (!tipo.equals("T") && !tipo.equals("C") && !tipo.equals("B") && !tipo.equals("D")) {
+                        System.out.print("\nValor inválido, informe uma das peças (T/C/B/D) para realizar a promoção: ");
+                        tipo = sc.nextLine().toUpperCase();
+                    }
+                    xadrezPartida.substituirPecaPromovida(tipo);
+                }
             } catch (ExcecaoNoXadrez e) {
                 System.out.println(e.getMessage());
                 sc.nextLine();
